@@ -19,5 +19,10 @@ pipeline {
                 echo "Bye, ${params.FirstName}!"
             }
         }
+        stage('Cleanup') {
+            steps {
+                echo "This is a dummy clean-up stage"
+            }
+        }
     }
 }
