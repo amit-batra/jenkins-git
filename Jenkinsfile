@@ -1,13 +1,22 @@
 pipeline {
     agent any
+    parameters {
+        string(
+            name: 'FirstName',
+            defaultValue: 'World',
+            description: 'You can specify your name for personalizing the greeting. If you don\'t specify anything, it will greet you with a "Hello, World!',
+            trim: true
+        )
+    }
     stages {
-        stage('Build') {
+        stage('Meet') {
             steps {
-                sh 'echo "Hello World"'
-                sh '''
-                    echo "Multiline shell steps works too"
-                    ls -lah
-                '''
+                echo "Hello, ${params.FirstName}!"
+            }
+        }
+        stage('Leave') {
+            steps {
+                echo "Bye, ${params.FirstName}!"
             }
         }
     }
