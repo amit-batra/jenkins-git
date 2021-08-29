@@ -4,4 +4,4 @@ A simple project to test jenkins git integration. And it should be triggered by 
 
 # Adding another heading
 
-Adding another paragraph. Will create a pull request this time. Another test.
+Adding another paragraph. Will create a pull request this time.
