@@ -21,7 +21,12 @@ pipeline {
         }
         stage('Cleanup') {
             steps {
-                echo "This is a dummy clean-up stage"
+                echo "This is a dummy clean-up stage."
+            }
+        }
+        stage('Goodbye') {
+            steps {
+                echo "I am done."
             }
         }
     }
